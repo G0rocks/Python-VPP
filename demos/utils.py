@@ -10,23 +10,6 @@ def get_git_hash():
         return None
 
 
-def header():
-    header = """
-    <script>
-        window.goatcounter = {no_onload: true}
-
-        window.addEventListener('hashchange', function(e) {
-            window.goatcounter.count({
-                path: location.pathname + location.search + location.hash,
-            })
-        })
-    </script>
-    <script data-goatcounter="https://yacht-vpp.goatcounter.com/count"
-            async src="//gc.zgo.at/count.js"></script>
-    """
-    return components.html(header)
-
-
 def footer():
     git_hash = get_git_hash()
     footer = f"""

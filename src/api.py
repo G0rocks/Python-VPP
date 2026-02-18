@@ -91,7 +91,7 @@ def makevppresults():
     # TODO: Error handling incorrect ranges
 
     vpp = data_to_vpp(data)
-    vpp.run(verbose=True)
+    vpp.run()
 
     return jsonify(vpp.results())
 
